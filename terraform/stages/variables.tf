@@ -112,3 +112,15 @@ variable "name_prefix" {
   description = "Prefix name that should be used for the cluster and services. If not provided then resource_group_name will be used"
   default     = ""
 }
+
+variable "logdna_exists" {
+  type        = bool
+  description = "Flag indicating if the logdna instance already exists (true or false)"
+  default     = true
+}
+
+variable "sysdig_exists" {
+  type        = bool
+  description = "Flag indicating if the sysdig instance already exists (true or false)"
+  default     = true
+}
