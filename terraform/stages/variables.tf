@@ -116,11 +116,11 @@ variable "name_prefix" {
 variable "logdna_exists" {
   type        = bool
   description = "Flag indicating if the logdna instance already exists (true or false)"
-  default     = true
+  default     = false
 }
 
 variable "sysdig_exists" {
   type        = bool
   description = "Flag indicating if the sysdig instance already exists (true or false)"
-  default     = true
+  default     = false
 }
