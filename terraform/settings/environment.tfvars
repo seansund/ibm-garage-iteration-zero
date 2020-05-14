@@ -1,5 +1,5 @@
 # The type of cluster that will be created/used (kubernetes, openshift, ocp4, or crc) Use "openshift" for OpenShift 3.11
-cluster_type="ocp4"
+cluster_type="kubernetes"
 # Flag indicating if we are using an existing cluster or creating a new one
 cluster_exists="true"
 
@@ -12,10 +12,10 @@ name_prefix="garage-dev"
 # - "${cluster_name}"
 # - "${name_prefix}-cluster"
 # - "${resource_group_name}-cluster"
-cluster_name="garage-dev-ocp4-cluster"
+cluster_name="garage-dev-iks117-cluster"
 
 resource_group_name="garage-dev-tools"
 vlan_region="us-east"
 
-logdna_exists=false
-sysdig_exists=false
+logdna_exists=true
+sysdig_exists=true

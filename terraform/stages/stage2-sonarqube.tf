@@ -1,5 +1,5 @@
 module "dev_serviceaccount_sonarqube" {
-  source = "github.com/ibm-garage-cloud/garage-terraform-modules.git//generic/cluster/serviceaccount?ref=v2.2.8"
+  source = "github.com/ibm-garage-cloud/terraform-cluster-serviceaccount.git?ref=v1.2.0"
 
   cluster_type             = var.cluster_type
   namespace                = module.dev_cluster_namespaces.tools_namespace_name
@@ -14,7 +14,7 @@ module "dev_tools_sonarqube_release" {
   cluster_type             = var.cluster_type
   cluster_ingress_hostname = module.dev_cluster.ingress_hostname
   cluster_config_file      = module.dev_cluster.config_file_path
-  releases_namespace       = module.dev_cluster_namespaces.tools_namespace_name
+  releases_namespace       = module.dev_serviceaccount_sonarqube.namespace
   service_account_name     = module.dev_serviceaccount_sonarqube.name
   tls_secret_name          = module.dev_cluster.tls_secret_name
 }

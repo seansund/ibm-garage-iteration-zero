@@ -1,4 +1,4 @@
-module "dev_tools_argocd_release" {
+module "dev_tools_argocd" {
   source = "github.com/ibm-garage-cloud/terraform-tools-argocd.git"
 
   cluster_config_file = module.dev_cluster.config_file_path
