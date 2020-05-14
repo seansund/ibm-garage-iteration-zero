@@ -2,7 +2,7 @@
 variable "user_home_dir" {
   type        = string
   description = "Home directory of run user. This is where Kube config will be downloaded."
-  default     = "/home/devops"
+  default     = "~"
 }
 
 # Resource Group Variables
@@ -115,12 +115,18 @@ variable "name_prefix" {
 
 variable "logdna_exists" {
   type        = bool
-  description = "Flag indicating if the logdna instance already exists (true or false)"
+  description = "Flag indicating if the logdna instance already exists"
   default     = false
 }
 
 variable "sysdig_exists" {
   type        = bool
-  description = "Flag indicating if the sysdig instance already exists (true or false)"
+  description = "Flag indicating if the sysdig instance already exists"
+  default     = false
+}
+
+variable "vpc_cluster" {
+  type        = bool
+  description = "Flag indicating if the cluster is a vpc cluster"
   default     = false
 }
