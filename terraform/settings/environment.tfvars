@@ -17,5 +17,5 @@ cluster_name="cntk-showcase-ocp4"
 resource_group_name="cntk-showcase"
 vlan_region="us-east"
 
-logdna_exists=false
-sysdig_exists=false
+logdna_exists=true
+sysdig_exists=true
