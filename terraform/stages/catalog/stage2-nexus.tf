@@ -1,5 +1,5 @@
 module "dev_tools_nexus" {
-  source = "github.com/ibm-garage-cloud/terraform-tools-nexus.git?ref=v1.1.0"
+  source = "github.com/ibm-garage-cloud/terraform-tools-nexus.git"
 
   cluster_config_file = module.dev_cluster.config_file_path
   cluster_type        = module.dev_cluster.type_code
