@@ -2,7 +2,7 @@ module "dev_serviceaccount_artifactory" {
   source = "github.com/ibm-garage-cloud/terraform-cluster-serviceaccount.git?ref=v1.2.0"
 
   cluster_type             = var.cluster_type
-  namespace                = module.dev_cluster_namespaces.tools_namespace_name
+  namespace                = module.dev_tools_namespace.name
   cluster_config_file_path = module.dev_cluster.config_file_path
   service_account_name     = "artifactory-artifactory"
   sscs                     = ["anyuid", "privileged"]
